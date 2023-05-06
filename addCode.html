@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="codeFormCont">
+    <div class="codeSubForm">
+      <form onsubmit="event.preventDefault()" method="post">
+        <div>Code Title</div><input type="text" name="codeTitle">
+        <div>Code </div><textarea name="code"></textarea>
+        <br>
+        <button class="button-85" onclick='handleSubmit()' type="submit">Submit</button>
+      </form>  
+    </div>
+  </div>
+ 
+<script src="addCode.js"></script>
+</body>
+</html>
