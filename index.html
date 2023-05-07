@@ -6,8 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prabhat Desk</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
 </head>
 <body>
+    <div class="loaderParent">
+        <div class="loader"></div>
+    </div>
     <div class='nav'>
         <div class="navLeft">
             <img src="logo.png" alt="" />
@@ -19,6 +24,7 @@
         </div>
         <div class="codeViewCloseBtn">Close</div>
     </div>
+    
     <div class="cardCont">
         <!-- <div class="card">
             <div class="codeTitle"></div>
@@ -29,7 +35,13 @@
         <textarea readonly class="codeViewer">
         </textarea>
     
-   
+        <div class="search-box">
+            <input type="text" class="search-txt" placeholder="Search...">
+            <a class="search-btn">
+              <i class="fas fa-search"></i>
+            </a>
+          </div>
+          
     <script src="script.js"></script>
 </body>
 </html>

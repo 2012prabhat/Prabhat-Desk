@@ -11,6 +11,7 @@
         for(let i in data){
             myArr.push(data[i]);
         }
+        // myArr.pop()
         for(let i=0;i<myArr.length;i++){
           createCards(myArr[i]);
         }
@@ -18,8 +19,8 @@
 
 
 
+let cardCont = document.querySelector(".cardCont");
 function createCards(data){
-  let cardCont = document.querySelector(".cardCont");
   cardCont.innerHTML += `<div class="card" id=${data.id}>
   <div class="codeTitle">${data.codeTitle}</div>
   </div>`
@@ -46,4 +47,21 @@ codeViewCloseBtn.addEventListener("click",()=>{
   codeViewCloseBtn.style.transform = "scale(0)";
 })
 
+setTimeout(() => {
+  document.querySelector(".loaderParent").style.display = "none";
+  document.querySelector(".search-box").style.transform = "scale(1)";
+  cardCont.style.display = "flex"
+}, 2000);
 
+
+
+let searchInput = document.querySelector(".search-box input");
+searchInput.addEventListener("input",filterData);
+function filterData(){
+  let inputData = document.querySelector(".search-box input").value;
+  let myFilteredArr = myArr.filter(f=>f.codeTitle.toLowerCase().includes( inputData.toLowerCase()));
+  cardCont.innerHTML = "";
+  for(let i=0;i<myFilteredArr.length;i++){
+    createCards(myFilteredArr[i])
+  }
+}
