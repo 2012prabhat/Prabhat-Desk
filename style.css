@@ -216,6 +216,7 @@ background: #04293A;
     padding: 20px 20px 0 20px;
     outline: none;
     scrollbar-width: 0;
+    z-index:1;
 }
 .codeViewer::-webkit-scrollbar{
     display: none;
