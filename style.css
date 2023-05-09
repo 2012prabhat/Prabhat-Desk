@@ -187,13 +187,14 @@ background: #04293A;
     color: black;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     animation: popUp 0.5s;
+    margin-top:10px;
 
 
 }
 .cardCont{
     padding: 80px 40px;
     display: none;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
